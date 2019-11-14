@@ -33,15 +33,17 @@
           <h1>Add Complaint</h1>
           <label for="ctype">Complaint Type: </label>
           <select class="ipbox" name="c_type" style="margin-left:" required>
-            <option value="washroom">Washroom</option>
             <option value="electrical">Electrical</option>
             <option value="civil">Civil</option>
-            <option value="cleaning">Cleaning</option>
           </select>
           <br>
           <br>
           <label for="location">Complaint Location: </label>
-          <input type="text" placeholder="Location" name="location" class="reg-box" style="width:160px;margin-left:119px;" required>
+          <select class="reg-box" name="location" style="width:160px;margin-left:119px;" required>
+            <option value="hostel">Hostel</option>
+            <option value="academic">Academic</option>
+            <option value="residential">Residential</option>
+          </select>
           <br>
           <br>
           <label for="complaint">Complaint:</label>

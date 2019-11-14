@@ -7,7 +7,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #ffffff;
+  background: #ffe6b5;
 }
 
 .box{
@@ -65,7 +65,7 @@ body{
 }
 
 .logo{
-  margin-left: 45%;
+  margin-left: 44.5%;
   margin-top: 8px;
   width: 11.5%;
   height: 24%;

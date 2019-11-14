@@ -50,19 +50,20 @@
     <link rel="stylesheet" href="/proj/css/login_page.css">
   </head>
   <body>
-    <div style="text-align:center;">
-      <a style="font-size: 35px ;font-family:Candara;">MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY</a>
+    <div>
+      <a style="font-size: 35px ;font-family:Candara; margin-left:23%;">MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY</a>
+      <a href="adminlogin.php" style="float:right">ADMIN LOGIN</a>
     </div>
     <div class="logo">
       <img src="/proj/images/mnnitlogo.png" height="175px" width="175px">
     </div>
     <form class="box" action="login_page.php" method="post">
-      
       <input type="text" name="username" placeholder="Username">
       <input type="password" name="password" placeholder="Password">
       <input type="submit" name="submitbtn" value="Login">
       <input type="submit" name="signupbtn" value="Sign Up">
+      <br>
+      <br>
     </form>
-    <a href="adminlogin.php" style="float:right">ADMIN LOGIN</a>
   </body>
 </html>
