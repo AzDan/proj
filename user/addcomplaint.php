@@ -25,30 +25,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>َComplaint Form</title>
     <link rel="stylesheet" href="/proj/css/add_complaint.css">
+    <script type="text/javascript" src="/proj/js/jquery341.js"></script>
+    <script type="text/javascript" src="/proj/js/ctypedropdown.js"></script>
   </head>
   <body>
     <form class="box" action="addcomplaint.php" method="post">
-      <div class="signupinfo">
-        <div class="first-last">
-          <h1>Add Complaint</h1>
+      <div class="complaintdiv">
+        <div>
           <label for="ctype">Complaint Type: </label>
-          <select class="ipbox" name="c_type" style="margin-left:" required>
+          <select class="ctypebox" name="c_type" style="margin-left:" required>
             <option value="electrical">Electrical</option>
             <option value="civil">Civil</option>
           </select>
           <br>
           <br>
           <label for="location">Complaint Location: </label>
-          <select class="reg-box" name="location" style="width:160px;margin-left:119px;" required>
-            <option value="hostel">Hostel</option>
-            <option value="academic">Academic</option>
-            <option value="residential">Residential</option>
+          <select class="locbox" data-target=".locspec" name="location" style="width:160px;margin-left:119px;" required>
+            <option value="hostel" data-show=".hostel">Hostel</option>
+            <option value="academic" data-show=".academic">Academic</option>
+            <option value="residential" data-show=".residential">Residential</option>
           </select>
+          <div class="locspec">
+            <div class="hostel hide">
+              <label for="hostelbox">Hostel:</label>
+              <select class="hostelspec" name="hostelbox" style="margin-left:" required>
+                <option value="svbh">SVBH</option>
+                <option value="pg">PG Hostel</option>
+                <option value="patel">Patel</option>
+                <option value="tilak">Tilak</option>
+                <option value="malviya">Malviya</option>
+                <option value="tandon">Tandon</option>
+                <option value="tagore">Tagore</option>
+                <option value="raman">Raman</option>
+                <option value="kngh">KNGH</option>
+                <option value="sngh">SNGH</option>
+                <option value="ih">IH</option>
+              </select>
+            </div>
+            <div class="academic hide">
+              <label for="acadbox">Area:</label>
+              <select class="acadspec" name="acadbox" style="margin-left:" required>
+                <option value="acad">Academic Building</option>
+                <option value="admin">Administrative Building</option>
+                <option value="mphall">MP Hall</option>
+                <option value="semhall">Seminar Hall</option>
+                <option value="lechall">Lecture Hall</option>
+                <option value="other">Other Area</option>
+              </select>
+            </div>
+            <div class="residential hide"></div>
+          </div>
           <br>
           <br>
           <label for="complaint">Complaint:</label>
           <br>
-          <textarea placeholder="Enter complaint here" id="text" name="complaint" rows="4" cols="31" class="reg-box" style="margin-left:20px;" required></textarea>
+          <textarea placeholder="Enter complaint here" id="text" name="complaint" rows="4" cols="31" class="locbox" style="margin-left:20px;" required></textarea>
         </div>
         <br>
         <br>
