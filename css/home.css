@@ -1,0 +1,211 @@
+body{
+  background: #ffffff;
+}
+
+.top-container {
+  overflow: hidden;
+  height: 2%;
+  /*padding: 20px 10px;*/
+}
+
+.top-container a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header-right a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.top-container a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .top-container a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+
+.title {
+  margin: 0px;
+  padding-top: 7px;
+  padding-left: 60px;
+  font-family: fantasy;
+}
+
+.logoutbtn {
+  color: black;
+  background-color: #2CDDFF;
+  text-align: center;
+  font-family: sans-serif;
+  display: inline-block;
+  font-size: 18px;
+  padding: 7px 22px;
+  border-radius: 20px;
+  margin: -31px;
+  margin-right: 7px;
+  opacity: 0.6;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  float: right;
+}
+
+.logoutbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.logoutbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -5px;
+  transition: 0.3s;
+}
+
+.logoutbtn:hover span {
+  padding-right: 15px;
+  opacity: 1;
+  background-color: #00C5EC;
+}
+
+.logoutbtn:hover {
+  opacity: 1;
+  background-color: #00C5EC;
+}
+
+.logoutbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.logoutbtn:active {
+  background-color: #00C5EC;
+  box-shadow: 0 2px #666;
+  transform: translateX(2px);
+}
+
+.sidestuff {
+  background-color: #ffffff;
+  width: 11%;
+  margin-left:;
+  height: 566px;
+  margin-top: 5%;
+}
+
+.sidebuttons {
+  color: black;
+  background-color: #e6e6e6;
+  text-align: center;
+  font-family: sans-serif;
+  display: inline-block;
+  margin-left: 14%;
+  font-size: 18px;
+  width: 55%;
+  padding: 7px 22px;
+  border-radius: 4px;
+  opacity: 1;
+  border: 2px solid #F9F9F9;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.sidebuttons:hover {
+  background-color: #cccccc;
+}
+
+.userctable {
+  background-color: white;
+  /*position: absolute;*/
+  height: auto;
+  width: 75%;
+  margin-left: 17%;
+  margin-top: -32%;
+}
+
+.bargraph2 {
+  background-color: white;
+  /*position: absolute;*/
+  height: 400px;
+  width: 600px;
+  margin-left: 57%;
+  margin-top: -500px;
+}
+
+.bargraph3 {
+  background-color: #191919;
+  color: white;
+  /*position: absolute;*/
+  height: 400px;
+  width: 600px;
+  margin-left: 17%;
+  margin-top: -500px;
+}
+
+.profile {
+  /*position: absolute;*/
+  color: black;
+  height: 30%;
+  width: 40%;
+  margin-left: 45%;
+  margin-top: -38%;
+  font-size: 20px;
+}
+
+.ipbox {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin:5px 20px 10px 79px;
+}
+
+.signupbtn{
+  border:0;
+  background: #6ede9c;
+  display: inline;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.signupbtn :hover{
+  background: #2ecc71;
+}
+
+.assigndiv {
+  background-color: #191919;
+  color: white;
+  position: absolute;
+  height: 140px;
+  width: 720px;
+  margin-left: 29%;
+  margin-top: -30px;
+}
