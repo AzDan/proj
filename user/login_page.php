@@ -53,8 +53,11 @@
     <div style="text-align:center;">
       <a style="font-size: 35px ;font-family:Candara;">MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY</a>
     </div>
+    <div class="logo">
+      <img src="/proj/images/mnnitlogo.png" height="175px" width="175px">
+    </div>
     <form class="box" action="login_page.php" method="post">
-      <h1>LOGIN</h1>
+      
       <input type="text" name="username" placeholder="Username">
       <input type="password" name="password" placeholder="Password">
       <input type="submit" name="submitbtn" value="Login">
