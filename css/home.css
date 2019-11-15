@@ -1,5 +1,5 @@
 body{
-  background: #ffffff;
+  background: #ffe6b5;
 }
 
 .top-container {
@@ -31,6 +31,8 @@ body{
 
 .header-right {
   float: right;
+  margin-right: 4px;
+  margin-top: 2px;
 }
 
 @media screen and (max-width: 500px) {
