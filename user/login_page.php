@@ -1,4 +1,4 @@
-      <?php
+  <?php
   session_id("usersession");
   session_start();
   include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
@@ -46,7 +46,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>َLogin</title>
+    <title>Login</title>
     <link rel="stylesheet" href="/proj/css/login_page.css">
   </head>
   <body>
