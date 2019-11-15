@@ -2,10 +2,10 @@ body{
   background: #ffffff;
 }
 
-.signupinfo{
-  margin-left: 30%;
+.complaintdiv{
+  margin-left: 25%;
   margin-right: 50%;
-  margin-top: -40%;
+  margin-top: -20%;
   border-radius: 20px;
   width: 60%;
   color: black;
@@ -13,7 +13,21 @@ body{
   background: #e6e6e6;
 }
 
-.ipbox {
+.ctypebox {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin:5px 20px 10px 79px;
+}
+
+.hostelspec {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin:5px 20px 10px 79px;
+}
+
+.acadspec {
   border: 2px solid black;
   border-radius: 5px;
   padding: 10px 15px;
@@ -24,7 +38,7 @@ body{
   margin:-23px 20px 5px 31px;
 }
 
-.reg-box {
+.locbox {
   border: 2px solid black;
   border-radius: 5px;
   padding: 10px 15px;
@@ -47,4 +61,18 @@ body{
 }
 .signupbtn :hover{
   background: #2ecc71;
+}
+
+.hostel{
+  margin-left: 50%;
+  margin-top: -6%;
+}
+
+.academic{
+  margin-left: 50%;
+  margin-top: -6%;
+}
+
+.hide{
+  display: none;
 }
