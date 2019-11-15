@@ -1,29 +1,25 @@
-      <?php
-  session_id("usersession");
+<?php
+  session_id("adminsession");
   session_start();
-  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
+  include '../includes/db.php';
   if(isset($_POST['submitbtn'])){
-
     $username = $_POST['username'];
     $password = $_POST['password'];
-
-    $hash = hash('sha1',$password);
-
     $data=array();
-    $query = "SELECT RegNo,Password FROM login WHERE RegNo='$username';";
+    $query = "SELECT username,password FROM adminlogin WHERE username='$username';";
     if ($res=mysqli_query($conn, $query)) {
       foreach ($res as $row) {
         $data[]=$row;
-      } 
+      }
     }
     else {
-        echo " ";
+        echo "Error: " . $query . "<br>" . mysqli_error($conn);
     }
     $r3=$res->num_rows;
     if($r3>0){
-      if ($data[0]['RegNo']==$username && $data[0]['Password']==$hash) {
-        $_SESSION['login_user']=$username;
-        header('Location: home.php');
+      if ($data[0]['username']==$username&&$data[0]['password']==$password) {
+        $_SESSION['login_admin']=$username;
+        header('Location: adminhome.php');
         exit;
       }
       else{
@@ -32,13 +28,10 @@
       }
     }
     else{
-    $errormsg="Incorrect username password combo!";
-    echo "<script type='text/javascript'>alert('$errormsg')</script>";
+      $errormsg="Incorrect username password combo!";
+      echo "<script type='text/javascript'>alert('$errormsg')</script>";
     }
     mysqli_close($conn);
-  }
-  if(isset($_POST['signupbtn'])){
-    header('Location: signup.php');
   }
  ?>
 
@@ -56,14 +49,12 @@
     <div class="logo">
       <img src="/proj/images/mnnitlogo.png" height="175px" width="175px">
     </div>
-    <form class="box" action="login_page.php" method="post">
+    <form class="box" action="adminlogin.php" method="post">
+      <h1>Admin Login</h1>
       <input type="text" name="username" placeholder="Username">
       <input type="password" name="password" placeholder="Password">
       <input type="submit" name="submitbtn" value="Login">
-      <input type="submit" name="signupbtn" value="Sign Up">
-      <button><a href="adminlogin.php" style="float:right">ADMIN LOGIN</a></button>
-      <br>
-      <br>
     </form>
+
   </body>
 </html>
