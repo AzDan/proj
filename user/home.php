@@ -1,6 +1,7 @@
 <?php
   include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/session.php');
   include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
+  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/static_content.php');
 
   $query = "SELECT * FROM user WHERE RegNo='$user_check';";
   $data=array();
@@ -54,9 +55,6 @@
     </style>
   </head>
   <body>
-      <?php
-        include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/static_top.php');
-      ?>
     <div class="userctable" style="overflow:auto;">
       <?php
           $data=array();
@@ -81,7 +79,7 @@
           echo '</table>';
       ?>
     </div>
-    <h1 style="margin-top:-20%; margin-left:48%;">Complaints</h1>
+    <h1 style="margin-top:-16%; margin-left:48%;">Complaints</h1>
     <!--<div class="profile">
       <h2>INFORMATION</h2>
       /*<?php

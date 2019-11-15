@@ -25,6 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>َComplaint Form</title>
     <link rel="stylesheet" href="/proj/css/add_complaint.css">
+    <link rel="stylesheet" href="/proj/css/home.css">
     <script type="text/javascript" src="/proj/js/jquery341.js"></script>
     <script type="text/javascript" src="/proj/js/ctypedropdown.js"></script>
   </head>
@@ -32,15 +33,15 @@
     <form class="box" action="addcomplaint.php" method="post">
       <div class="complaintdiv">
         <div>
-          <label for="ctype">Complaint Type: </label>
-          <select class="ctypebox" name="c_type" style="margin-left:" required>
+          <label for="ctype" style="margin-left:5%;">Complaint Type: </label>
+          <select class="ctypebox" name="ctype" required>
             <option value="electrical">Electrical</option>
             <option value="civil">Civil</option>
           </select>
           <br>
           <br>
-          <label for="location">Complaint Location: </label>
-          <select class="locbox" data-target=".locspec" name="location" style="width:160px;margin-left:119px;" required>
+          <label for="location" style="margin-left:5%;">Complaint Location: </label>
+          <select class="locbox" data-target=".locspec" name="location" style="width:160px;margin-left:50px;" required>
             <option value="hostel" data-show=".hostel">Hostel</option>
             <option value="academic" data-show=".academic">Academic</option>
             <option value="residential" data-show=".residential">Residential</option>
