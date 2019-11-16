@@ -2,10 +2,12 @@
   session_id("adminsession");
   session_start();
   include '../includes/db.php';
+  
   if(isset($_POST['submitbtn'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     $data=array();
+    $hash = hash('sha1',$password);
     $query = "SELECT username,password FROM adminlogin WHERE username='$username';";
     if ($res=mysqli_query($conn, $query)) {
       foreach ($res as $row) {
@@ -17,9 +19,9 @@
     }
     $r3=$res->num_rows;
     if($r3>0){
-      if ($data[0]['username']==$username&&$data[0]['password']==$password) {
+      if ($data[0]['username']==$username&&$data[0]['password']==$hash) {
         $_SESSION['login_admin']=$username;
-        header('Location: adminhome.php');
+        header('Location: dpd.php');
         exit;
       }
       else{
@@ -44,7 +46,8 @@
   </head>
   <body>
     <div>
-      <a style="font-size: 35px ;font-family:Candara; margin-left:23%;">MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY</a>
+      <a href="login_page.php" style="float:left">BACK TO LOGIN</a>
+      <a style="font-size: 35px ;font-family:Candara; margin-left: 7.45%;">MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY, ALLAHABAD</a>
     </div>
     <div class="logo">
       <img src="/proj/images/mnnitlogo.png" height="175px" width="175px">

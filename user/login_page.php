@@ -14,7 +14,7 @@
     if ($res=mysqli_query($conn, $query)) {
       foreach ($res as $row) {
         $data[]=$row;
-      } 
+      }
     }
     else {
         echo " ";
@@ -51,7 +51,7 @@
   </head>
   <body>
     <div>
-      <a style="font-size: 35px ;font-family:Candara; margin-left:23%;">MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY</a>
+      <a style="font-size: 35px ;font-family:Candara; margin-left:15.5%;">MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY, ALLAHABAD</a>
     </div>
     <div class="logo">
       <img src="/proj/images/mnnitlogo.png" height="175px" width="175px">

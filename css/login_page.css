@@ -23,11 +23,13 @@ body{
   background-color: #f7fcde;
   text-align: center;
 }
+
 .box h1{
   color: black;
   text-transform: uppercase;
   font-weight: 500;
 }
+
 .box input[type = "text"],.box input[type = "password"]{
   border:0;
   background: #ffffff;
@@ -42,10 +44,12 @@ body{
   border-radius: 24px;
   transition: 0.25s;
 }
+
 .box [type = "text"]:focus,.box input[type = "password"]:focus{
   width: 280px;
   border-color: #2ecc71;
 }
+
 .box input[type = "submit"]{
   border:0;
   background: #6ede9c;
@@ -60,9 +64,11 @@ body{
   transition: 0.25s;
   cursor: pointer;
 }
+
 .box input[type = "submit"]:hover{
   background: #2ecc71;
 }
+
 .box button{
   border:0;
   background: #6ede9c;
@@ -77,19 +83,23 @@ body{
   transition: 0.25s;
   cursor: pointer;
 }
+
 button>a{
   text-decoration:none;
   color:white;
 }
+
 .box button:hover{
   background: #2ecc71;
 }
+
 .logo{
   margin-left: 44.5%;
   margin-top: 8px;
   width: 11.5%;
   height: 24%;
 }
+
 @media (max-width: 40em) {
   .logo {
   display: none;

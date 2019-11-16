@@ -33,23 +33,23 @@
     <form class="box" action="addcomplaint.php" method="post">
       <div class="complaintdiv">
         <div>
-          <label for="ctype" style="margin-left:5%;">Complaint Type: </label>
+          <label for="ctype" style="margin-left:3%;">Complaint Type: </label>
           <select class="ctypebox" name="ctype" required>
             <option value="electrical">Electrical</option>
             <option value="civil">Civil</option>
           </select>
           <br>
           <br>
-          <label for="location" style="margin-left:5%;">Complaint Location: </label>
-          <select class="locbox" data-target=".locspec" name="location" style="width:160px;margin-left:50px;" required>
+          <label for="location" style="margin-left:3%;">Complaint Location: </label>
+          <select class="locbox" data-target=".locspec" name="location" style="width:120px;margin-left:10px;" required>
             <option value="hostel" data-show=".hostel">Hostel</option>
             <option value="academic" data-show=".academic">Academic</option>
             <option value="residential" data-show=".residential">Residential</option>
           </select>
           <div class="locspec">
             <div class="hostel hide">
-              <label for="hostelbox">Hostel:</label>
-              <select class="hostelspec" name="hostelbox" style="margin-left:" required>
+              <label for="hostelbox" style="margin-left:-10%;">Hostel:</label>
+              <select class="hostelspec" name="hostelbox" style="margin-left:10px;" required>
                 <option value="svbh">SVBH</option>
                 <option value="pg">PG Hostel</option>
                 <option value="patel">Patel</option>
@@ -64,27 +64,37 @@
               </select>
             </div>
             <div class="academic hide">
-              <label for="acadbox">Area:</label>
-              <select class="acadspec" name="acadbox" style="margin-left:" required>
+              <label for="acadbox" style="margin-left:-10%;">Area:</label>
+              <select class="acadspec" name="acadbox" style="margin-left:10px" required>
                 <option value="acad">Academic Building</option>
                 <option value="admin">Administrative Building</option>
                 <option value="mphall">MP Hall</option>
                 <option value="semhall">Seminar Hall</option>
                 <option value="lechall">Lecture Hall</option>
+                <option value="cc">Computer Center</option>
+                <option value="csed">CSED</option>
                 <option value="other">Other Area</option>
               </select>
             </div>
-            <div class="residential hide"></div>
+            <div class="residential hide">
+            </div>
+          </div>
+          <div class="address">
+            <label for="addrbox">Address:</label>
+            <input type="text" placeholder="Address" name="addrbox" class="addr" required>
+            <div style="margin-left:40%; margin-top:-4.5%;">
+              (<b>Hostel</b> - Room number | <b>Academic</b> - Specific area to the nearest building selected, specify if others| <b>Residential</b> - Apartment number)
+            </div>
           </div>
           <br>
           <br>
-          <label for="complaint">Complaint:</label>
+          <label for="complaint" style="margin-left:3%;">Complaint:</label>
           <br>
-          <textarea placeholder="Enter complaint here" id="text" name="complaint" rows="4" cols="31" class="locbox" style="margin-left:20px;" required></textarea>
+          <textarea placeholder="Enter complaint here" id="text" name="complaint" rows="4" cols="34" class="locbox" style="margin-left:30px;" required></textarea>
         </div>
         <br>
         <br>
-        <input type="submit" name="submitbtn" value="Submit" class="signupbtn"></button>
+        <input type="submit" name="submitbtn" value="Submit" class="signupbtn" style="margin-left:40%;"></button>
       </div>
     </form>
   </body>

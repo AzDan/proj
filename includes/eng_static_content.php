@@ -9,12 +9,10 @@
     </div>
 
     <div class="sidestuff">
-      <a class="sidebuttons" style="text-decoration: none; margin-top: 5px;" href="home.php">HOME</a>
+      <a class="sidebuttons" style="text-decoration: none; margin-top: 5px;" href="engineer.php">HOME</a>
       <br>
-      <a class="sidebuttons" style="text-decoration: none; margin-top: 15px;" href="profile.php">Profile</a>
+      <a class="sidebuttons" style="text-decoration: none; margin-top: 15px;" href="engcomplaints.php">Complaints</a>
       <br>
-      <a class="sidebuttons" style="text-decoration: none; margin-top: 15px;" href="addcomplaint.php">Add Complaint</a>
-      <br>
-      <a class="sidebuttons" style="text-decoration: none; margin-top: 15px;" href="changepassword.php">Change Password</a>
+      <a class="sidebuttons" style="text-decoration: none; margin-top: 15px;" href="engchangepassword.php">Change Password</a>
       <br>
     </div>

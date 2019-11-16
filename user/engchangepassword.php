@@ -1,6 +1,6 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/session.php');
-include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/static_content.php');
+include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/adminsession.php');
+include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/eng_static_content.php');
 include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
 
   if(isset($_POST['submitbtn'])){
@@ -10,7 +10,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
 
     $oldpasshash = hash('sha1',$oldpass);
     $data=array();
-    $q="SELECT * FROM login WHERE RegNo='$user_check';";
+    $q="SELECT * FROM adminlogin WHERE username='$user_check';";
     if ($res=mysqli_query($conn, $q)) {
       foreach ($res as $row) {
         $data[]=$row;
@@ -20,7 +20,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
 
     if($newpass==$newpassconf && $oldph==$oldpasshash){
       $newhash = hash('sha1',$newpass);
-      $query = "UPDATE login SET Password='$newhash' WHERE RegNo=$user_check;";
+      $query = "UPDATE adminlogin SET Password='$newhash' WHERE username=$user_check;";
       if(mysqli_query($conn,$query)){
         $message="Password successfully changed!";
         echo "<script type='text/javascript'>alert('$message');</script>";

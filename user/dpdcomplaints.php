@@ -1,9 +1,9 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/session.php');
+  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/adminsession.php');
   include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
-  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/static_content.php');
+  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/dpd_static_content.php');
 
-  $query = "SELECT * FROM user WHERE RegNo='$user_check';";
+  /*$query = "SELECT * FROM user WHERE RegNo='$user_check';";
   $data=array();
 
   if($res = mysqli_query($conn,$query)){
@@ -19,7 +19,7 @@
   $lname=$data[0]['LastName'];
   $email=$data[0]['email'];
   $occ=$data[0]['Occupation'];
-  $address=$data[0]['Address'];
+  $address=$data[0]['Address'];*/
 
  ?>
 
@@ -58,7 +58,7 @@
     <div class="userctable" style="overflow:auto;">
       <?php
           $data=array();
-          if ($res=mysqli_query($conn, "select * FROM complaint WHERE RegNo='$user_check'")){
+          if ($res=mysqli_query($conn, "select * FROM complaint")){
             foreach ($res as $row) {
                 $data[]=$row;
             }

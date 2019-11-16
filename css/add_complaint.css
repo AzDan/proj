@@ -17,7 +17,7 @@ body{
   border: 2px solid black;
   border-radius: 5px;
   padding: 10px 15px;
-  margin:5px 20px 10px 79px;
+  margin:5px 20px 10px 35px;
 }
 
 .hostelspec {
@@ -42,7 +42,7 @@ body{
   border: 2px solid black;
   border-radius: 5px;
   padding: 10px 15px;
-  margin:5px 20px 10px 14px;
+  margin:5px 20px 10px 10px;
 }
 
 .signupbtn{
@@ -63,6 +63,14 @@ body{
   background: #2ecc71;
 }
 
+.addr{
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-left: 85px;
+
+}
+
 .hostel{
   margin-left: 50%;
   margin-top: -6%;
@@ -75,4 +83,9 @@ body{
 
 .hide{
   display: none;
+}
+
+.address{
+  margin-left: 3%;
+  margin-top: 20px;
 }
