@@ -43,7 +43,7 @@
     <div style="text-align:center;">
       <a style="font-size: 35px ;font-family:Candara;">MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY</a>
     </div>
-    <form action="signup.php" method="post">
+    <form id="signUpForm" action="signup.php" method="post">
       <div class="signupinfo">
         <div class="first-last">
           <label for="occupation">Occupation</label>
@@ -61,7 +61,7 @@
           <br>
         <div class="email-pass">
           <label for="email">E-mail</label>
-          <input type="text" placeholder="E-mail" name="email" class="email-box" required>
+          <input type="text" placeholder="E-mail" name="email" id="email" class="email-box" required>
         </div>
           <br>
         <div class="reg-no">
@@ -79,11 +79,29 @@
             <input type="text" placeholder="Address" name="address" class="address" required>
           </div>
             <br>
-          <button type="submit" name="submitbtn" class="signupbtn"><span>SUBMIT</span></button>
+          <button id="submitbtn" name="submitbtn" class="signupbtn" disabled><span>SUBMIT</span></button>
       </div>
       <div class="logbtn">
         <a href="login_page.php">Back to login page</a>
       </div>
     </form>
+    <script>
+    const signUpForm = document.getElementById('signUpForm');
+    const emailField = document.getElementById('email');
+    const okButton = document.getElementById('submitbtn');
+    emailField.addEventListener('keyup', function (event) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+    var inputText = emailField.value;
+    isValidEmail = inputText.match(mailformat)
+    if ( isValidEmail) {
+    okButton.disabled = false;
+    } else {
+    okButton.disabled = true;
+    }
+    });
+    okButton.addEventListener('click', function (event) {
+    signUpForm.submit();
+    });
+    </script>
   </body>
 </html>
