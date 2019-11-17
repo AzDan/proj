@@ -5,9 +5,17 @@
 
   if(isset($_POST['submitbtn'])){
     $complaint = $_POST['complaint'];
-    $c_type=$_POST["c_type"];
+    $c_type=$_POST["ctype"];
     $location=$_POST["location"];
-    $query1="INSERT INTO complaint(RegNo,Description,Date,Type,Location,Status) VALUES('$user_check','$complaint',curdate(),'$c_type','$location','pending');";
+    $addr = $_POST["addrbox"];
+    $spechostel = $_POST["addrhbox"];
+    $specacad = $_POST["addrsbox"];
+    if($location=="hostel"){
+        $query1="INSERT INTO complaint(RegNo,Description,Date,Type,Location,spec,Address,Status) VALUES('$user_check','$complaint',curdate(),'$c_type','$location','$spechostel','$addr','pending');";
+    }
+    else if($location=="academic"){
+      $query1="INSERT INTO complaint(RegNo,Description,Date,Type,Location,spec,Address,Status) VALUES('$user_check','$complaint',curdate(),'$c_type','$location','$specacad','$addr','pending');";
+    }
 
     if(mysqli_query($conn,$query1)){
       $message="Complaint successfully registered!";
@@ -48,8 +56,8 @@
           </select>
           <div class="locspec">
             <div class="hostel hide">
-              <label for="hostelbox" style="margin-left:-10%;">Hostel:</label>
-              <select class="hostelspec" name="hostelbox" style="margin-left:10px;" required>
+              <label for="addrsbox" style="margin-left:-10%;">Hostel:</label>
+              <select class="hostelspec" name="addrhbox" style="margin-left:10px;" required>
                 <option value="svbh">SVBH</option>
                 <option value="pg">PG Hostel</option>
                 <option value="patel">Patel</option>
@@ -64,8 +72,8 @@
               </select>
             </div>
             <div class="academic hide">
-              <label for="acadbox" style="margin-left:-10%;">Area:</label>
-              <select class="acadspec" name="acadbox" style="margin-left:10px" required>
+              <label for="addrsbox" style="margin-left:-10%;">Area:</label>
+              <select class="acadspec" name="addrsbox" style="margin-left:10px" required>
                 <option value="acad">Academic Building</option>
                 <option value="admin">Administrative Building</option>
                 <option value="mphall">MP Hall</option>

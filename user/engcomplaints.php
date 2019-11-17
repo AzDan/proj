@@ -57,14 +57,55 @@
   <body>
     <div class="userctable" style="overflow:auto;">
       <?php
+          $q="";
+          $username=$_SESSION['login_admin'];
           $data=array();
-          if ($res=mysqli_query($conn, "select * FROM complaint")){
+          $query = "SELECT username,type FROM adminlogin WHERE username='$username';";
+          if ($res=mysqli_query($conn, $query)) {
             foreach ($res as $row) {
-                $data[]=$row;
+              $data[]=$row;
             }
           }
           else {
-             echo "Error: " . $query . "<br>" . mysqli_error($conn);
+              echo "Error: " . $query . "<br>" . mysqli_error($conn);
+          }
+          $r3=$res->num_rows;
+
+          if($r3>0){
+            if ($data[0]['type']==1) {
+              $q = "SELECT * FROM complaint WHERE type='civil';";
+            }
+            else if ($data[0]['type']==2) {
+              $q = "SELECT * FROM complaint WHERE type='electrical';";
+            }
+            else if ($data[0]['type']==11) {
+              $q = "SELECT * FROM complaint WHERE type='civil' and location='hostel';";
+            }
+            else if ($data[0]['type']==12) {
+              $q = "SELECT * FROM complaint WHERE type='civil' and location='academic';";
+            }
+            else if ($data[0]['type']==13) {
+              $q = "SELECT * FROM complaint WHERE type='civil' and location='residential';";
+            }
+            else if ($data[0]['type']==21) {
+              $q = "SELECT * FROM complaint WHERE type='electrical' and location='hostel';";
+            }
+            else if ($data[0]['type']==22) {
+              $q = "SELECT * FROM complaint WHERE type='electrical' and location='academic';";
+            }
+            else if ($data[0]['type']==23) {
+              $q = "SELECT * FROM complaint WHERE type='electrical' and location='residential';";
+            }
+          }
+
+          $dat=array();
+          if ($res=mysqli_query($conn, $q)){
+            foreach ($res as $row) {
+                $dat[]=$row;
+            }
+          }
+          else {
+             echo "Error: " . $q . "<br>" . mysqli_error($conn);
           }
           $r2=$res->num_rows;
           echo '<table id="customers">';
@@ -74,7 +115,7 @@
           echo '</tr>';
           for($i=0;$i<$r2;$i++){
             echo '<tr>';
-            echo '<td>'.$data[$i]['ComplaintNo'].'</td>'.'<td>'.$data[$i]['Description'].'</td>'.'<td>'.$data[$i]['Date'].'</td>'.'<td>'.$data[$i]['Type'].'</td>'.'<td>'.$data[$i]['Location'].'</td>'.'<td>'.$data[$i]['Status'].'</td>';
+            echo '<td>'.$dat[$i]['ComplaintNo'].'</td>'.'<td>'.$dat[$i]['Description'].'</td>'.'<td>'.$dat[$i]['Date'].'</td>'.'<td>'.$dat[$i]['Type'].'</td>'.'<td>'.$dat[$i]['spec'].'</td>'.'<td>'.$dat[$i]['Status'].'</td>';
             echo '</tr>';
           }
           echo '</table>';

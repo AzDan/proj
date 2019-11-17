@@ -1,14 +1,13 @@
 <?php
-  session_id("adminsession");
-  session_start();
-  include '../includes/db.php';
+  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/adminsession.php');
+  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
   
   if(isset($_POST['submitbtn'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     $data=array();
     $hash = hash('sha1',$password);
-    $query = "SELECT username,password FROM adminlogin WHERE username='$username';";
+    $query = "SELECT username,password,type FROM adminlogin WHERE username='$username';";
     if ($res=mysqli_query($conn, $query)) {
       foreach ($res as $row) {
         $data[]=$row;
@@ -19,9 +18,14 @@
     }
     $r3=$res->num_rows;
     if($r3>0){
-      if ($data[0]['username']==$username&&$data[0]['password']==$hash) {
+      if ($data[0]['username']==$username&&$data[0]['password']==$hash&&$data[0]['type']==0) {
         $_SESSION['login_admin']=$username;
         header('Location: dpd.php');
+        exit;
+      }
+      else if ($data[0]['username']==$username&&$data[0]['password']==$hash&&$data[0]['type']!=0) {
+        $_SESSION['login_admin']=$username;
+        header('Location: engineer.php');
         exit;
       }
       else{

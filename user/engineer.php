@@ -1,7 +1,7 @@
 <?php
   include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/adminsession.php');
   include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
-  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/dpd_static_content.php');
+  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/eng_static_content.php');
 
   /*$query = "SELECT * FROM user WHERE RegNo='$user_check';";
   $data=array();

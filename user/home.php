@@ -17,7 +17,7 @@
   $username=$data[0]['RegNo'];
   $fname=$data[0]['FirstName'];
   $lname=$data[0]['LastName'];
-  $email=$data[0]['Email'];
+  $email=$data[0]['email'];
   $occ=$data[0]['Occupation'];
   $address=$data[0]['Address'];
 
