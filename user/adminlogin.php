@@ -1,7 +1,8 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/adminsession.php');
+session_id("adminsession");
+session_start();
   include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
-  
+
   if(isset($_POST['submitbtn'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
