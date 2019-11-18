@@ -70,11 +70,11 @@
           echo '<table id="customers">';
           echo '<caption style="font-size:30px;">COMPLAINTS</caption>';
           echo '<tr>';
-          echo '<td>'.'CID'.'</td>'.'<td>'.'Description'.'</td>'.'<td>'.'Date'.'</td>'.'<td>'.'Type'.'</td>'.'<td>'.'Location'.'</td>'.'<td>'.'Status'.'</td>';
+          echo '<td>'.'CID'.'</td>'.'<td>'.'Description'.'</td>'.'<td>'.'Date'.'</td>'.'<td>'.'Type'.'</td>'.'<td>'.'Location'.'</td>'.'<td>'.'Area'.'</td>'.'<td>'.'Status'.'</td>';
           echo '</tr>';
           for($i=0;$i<$r2;$i++){
             echo '<tr>';
-            echo '<td>'.$data[$i]['ComplaintNo'].'</td>'.'<td>'.$data[$i]['Description'].'</td>'.'<td>'.$data[$i]['Date'].'</td>'.'<td>'.$data[$i]['Type'].'</td>'.'<td>'.$data[$i]['Location'].'</td>'.'<td>'.$data[$i]['Status'].'</td>';
+            echo '<td>'.$data[$i]['ComplaintNo'].'</td>'.'<td>'.$data[$i]['Description'].'</td>'.'<td>'.$data[$i]['Date'].'</td>'.'<td>'.$data[$i]['Type'].'</td>'.'<td>'.$data[$i]['Location'].'</td>'.'<td>'.$data[$i]['spec'].'</td>'.'<td>'.$data[$i]['Status'].'</td>';
             echo '</tr>';
           }
           echo '</table>';

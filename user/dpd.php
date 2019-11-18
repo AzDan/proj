@@ -31,6 +31,6 @@
     <link rel="stylesheet" type="text/css" href="/proj/css/home.css">
   </head>
   <body>
-
+      <iframe class="graphs" src="/proj/user/index2.php">
   </body>
 </html>
