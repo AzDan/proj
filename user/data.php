@@ -2,8 +2,7 @@
 header('Content-Type: application/json');
 
 $conn = mysqli_connect("localhost","root","","complaintmgmt");
-$v=11;
-$sqlQuery = "SELECT id,Date,Labels FROM LablledComplaints where month(date)=$v";
+$sqlQuery = "SELECT id,Date,Labels FROM LablledComplaints;";
 
 $result = mysqli_query($conn,$sqlQuery);
 
