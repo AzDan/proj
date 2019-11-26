@@ -43,39 +43,39 @@
             case 2:
               echo '<h4 class="heading">February</h4>';
               break;
-              case 3:
-                echo '<h4 class="heading">March</h4>';
-                break;
-                case 4:
-                  echo '<h4 class="heading">April</h4>';
-                  break;
-                  case 5:
-                    echo '<h4 class="heading">May</h4>';
-                    break;
-                    case 6:
-                      echo '<h4 class="heading">June</h4>';
-                      break;
-                      case 7:
-                        echo '<h4 class="heading">July</h4>';
-                        break;
-                        case 8:
-                          echo '<h4 class="heading">August</h4>';
-                          break;
-                          case 9:
-                            echo '<h4 class="heading">September</h4>';
-                            break;
-                            case 10:
-                              echo '<h4 class="heading">October</h4>';
-                              break;
-                              case 11:
-                                echo '<h4 class="heading">November</h4>';
-                                break;
-                                case 12:
-                                  echo '<h4 class="heading">December</h4>';
-                                  break;
-                                  case 20:
-                                    echo '<h4 class="heading">ALL</h4>';
-                                    break;
+            case 3:
+              echo '<h4 class="heading">March</h4>';
+              break;
+            case 4:
+              echo '<h4 class="heading">April</h4>';
+              break;
+            case 5:
+              echo '<h4 class="heading">May</h4>';
+              break;
+            case 6:
+              echo '<h4 class="heading">June</h4>';
+              break;
+            case 7:
+              echo '<h4 class="heading">July</h4>';
+              break;
+            case 8:
+              echo '<h4 class="heading">August</h4>';
+              break;
+            case 9:
+              echo '<h4 class="heading">September</h4>';
+              break;
+            case 10:
+              echo '<h4 class="heading">October</h4>';
+              break;
+            case 11:
+              echo '<h4 class="heading">November</h4>';
+              break;
+            case 12:
+              echo '<h4 class="heading">December</h4>';
+              break;
+            case 20:
+              echo '<h4 class="heading">ALL</h4>';
+              break;
           }
         }
        ?>
