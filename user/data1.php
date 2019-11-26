@@ -4,13 +4,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/proj/includes/db.php');
 header('Content-Type: application/json');
 
 $conn = mysqli_connect("localhost","root","","complaintmgmt");
-$v=$_SESSION['mnum'];
-if($v==20){
-		$sqlQuery = "SELECT id,Date,Labels FROM LablledComplaints;";
-}
-else{
-		$sqlQuery = "SELECT id,Date,Labels FROM LablledComplaints WHERE month(Date)=$v;";
-}
+
+$sqlQuery = "SELECT * FROM predicted;";
 
 $result = mysqli_query($conn,$sqlQuery);
 

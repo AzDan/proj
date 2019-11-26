@@ -15,4 +15,6 @@
       <br>
       <a class="sidebuttons" style="text-decoration: none; margin-top: 15px;" href="dpdchangepassword.php">Change Password</a>
       <br>
+      <a class="sidebuttons" style="text-decoration: none; margin-top: 15px;" href="prediction.php">Prediction</a>
+      <br>
     </div>
