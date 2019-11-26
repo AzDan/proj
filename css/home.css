@@ -217,5 +217,27 @@ body{
   height:83%;
   width:85%;
   margin-left: 13%;
-  margin-top: -23%;
+  margin-top: -23.5%;
+}
+
+.ddm{
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin:5px 20px 10px 79px;
+  margin-top: -25%;
+  margin-left: 0%;
+}
+
+.subbtn{
+  margin-top: -24.20%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin-left: -1%;
+}
+
+.heading{
+  margin-top: -24.20%;
+  margin-left: 40%;
 }
